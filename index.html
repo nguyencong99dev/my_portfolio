@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nguyễn Văn Thành Công · Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500&family=Pixelify+Sans:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="#top">nguyencong99dev</a>
+      <ul>
+        <li class="hide-sm"><a class="link" href="#projects">Projects</a></li>
+        <li class="hide-sm"><a class="link" href="#experience">Experience</a></li>
+        <li class="hide-sm"><a class="link" href="#skills">Skills</a></li>
+        <li class="hide-sm"><a class="link" href="#education">Education</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+        <li><button class="theme" id="theme" aria-label="Toggle light and dark themes">◐</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">▶ PRESS START</p>
+        <h1>Hello, I'm <span>Công</span>.<br>Software Developer transitioning into game development.</h1>
+        <p>Over 2 years of experience on large-scale enterprise projects with a 47-person team. I’m now focused on game
+          systems programming with Unity and C#. I also create pixel art in Aseprite and design combat UI/UX.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card" data-open="mo-li">
+            <div class="thumb" data-ph="[ Mo-Li gameplay image ]"><img src="assets/img/mo-li-combat.png"
+                alt="Mo-Li combat screen" onerror="this.remove()"></div>
+            <h3>Mo-Li: Monster-Collection RPG</h3>
+            <p>A turn-based monster-collection RPG built with Unity and C#, featuring event-driven architecture and
+              ScriptableObject-driven data.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span
+                class="tag">Turn-based</span></div>
+            <button class="more">View Details →</button>
+          </article>
+          <article class="card" data-open="shop">
+            <div class="thumb" data-ph="[ e-commerce interface image ]"><img src="assets/img/ecommerce.png"
+                alt="E-commerce system interface" onerror="this.remove()"></div>
+            <h3>E-Commerce with Personalized Recommendations</h3>
+            <p>A full-stack e-commerce application with a custom TypeScript collaborative filtering model that
+              recommends products to each user.</p>
+            <div class="tags"><span class="tag">Angular</span><span class="tag">Express.js</span><span
+                class="tag">MongoDB</span></div>
+            <button class="more">View Details →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <h2>Work Experience</h2>
+        <ol class="tl">
+          <li>
+            <time>02/2023 – 04/2025</time>
+            <h3>Software Engineer – SAP Technical Consultant</h3>
+            <span class="co">FPT Software · Full-time</span>
+            <ul>
+              <li>Contributed to a 47-member project migrating a large-scale enterprise system, gaining experience with
+                complex system architecture and cross-team collaboration.</li>
+              <li>Designed and implemented integrations across platforms using interfaces such as SAP PI/PO and IDoc,
+                developing a strong understanding of data flows. These skills also apply to game networking and save
+                systems.</li>
+              <li>Built and extended UI/UX components, testing for responsiveness and accessibility.</li>
+              <li>Developed business logic and enhancements based on requirements, and debugged issues in production.
+              </li>
+              <li>Collaborated with functional teams to turn business requirements into technical solutions.</li>
+            </ul>
+          </li>
+          <li>
+            <time>08/2022 – 02/2023</time>
+            <h3>Angular Developer</h3>
+            <span class="co">FPT Software · Full-time</span>
+            <ul>
+              <li>Developed and maintained web applications with Angular.</li>
+              <li>Built responsive UI/UX using routing, navigation, and component architecture.</li>
+              <li>Integrated RESTful APIs into the frontend; tested and debugged features while working in an Agile
+                team.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="tags"><b>GAME DEV</b><span class="tag">Unity</span><span class="tag">C#</span><span
+              class="tag">Aseprite</span></div>
+          <div class="tags"><b>WEB / BACKEND</b><span class="tag">TypeScript</span><span class="tag">Angular</span><span
+              class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span
+              class="tag">SQL</span></div>
+          <div class="tags"><b>TOOLS</b><span class="tag">Git</span><span class="tag">Docker</span><span
+              class="tag">Postman</span></div>
+          <div class="tags"><b>OTHER</b><span class="tag">SAP ABAP</span><span class="tag">English B1</span></div>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="wrap">
+        <h2>Education</h2>
+        <article class="edu-card">
+          <div class="thumb" data-ph="[ ảnh trường đại học ]">
+            <img src="assets/img/university.png" alt="Khuôn viên University of Transport and Communications 2"
+              onerror="this.remove()">
+          </div>
+          <div>
+            <h3>University of Transport and Communications 2</h3>
+            <p>Bachelor of Information Technology</p>
+            <div class="tags"><span class="tag">Graduated 03/2024</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Open to game development opportunities. Feel free to reach out anytime.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:nguyencong99.dev@gmail.com">Send Email</a>
+          <a class="btn ghost" href="https://github.com/nguyencong99dev">GitHub</a>
+          <a class="btn ghost" href="https://linkedin.com/in/nguyencong99dev">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 nguyencong99dev</div>
+  </footer>
+
+  <!-- ===== POPUP: Mo-Li ===== -->
+  <dialog id="mo-li" aria-labelledby="t-mo-li"><button class="x" data-close aria-label="Close">✕</button>
+    <div class="dlg">
+      <h2 id="t-mo-li">Mo-Li: Turn-Based Monster-Collection RPG</h2>
+      <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Feb 2026 –
+          Present</span></div>
+      <div class="thumb" data-ph="[ video gameplay Mo-Li ]">
+        <video controls playsinline preload="metadata" poster="assets/img/mo-li-combat.png">
+          <source src="assets/video/gamedemo.mp4" type="video/mp4" onerror="this.parentElement.remove()">
+        </video>
+      </div>
+      <h3>Overview</h3>
+      <p>A turn-based monster-collection RPG. The goal is to build a foundation for adding monsters, skills, and items
+        with minimal changes to the core code.</p>
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>Core architecture:</strong> An asynchronous Bootstrapper boot sequence, persistent managers (Assets,
+          Audio, Input, Scene, and Save), and separate World and Combat scenes.</li>
+        <li><strong>Generic EventBus&lt;T&gt;</strong> (struct events with last-value replay) decouples the UI from
+          gameplay (<em>event-driven architecture</em>).</li>
+        <li><strong>Combat:</strong> State Pattern with substates for player actions (choose action → choose target →
+          confirm). Skills, items, and fleeing are modeled with the Command Pattern and processed through an
+          asynchronous ActionQueue. The queue supports priority insertion for reactions such as Faint and guards against
+          reentrancy.</li>
+        <li><strong>Data-driven design:</strong> ScriptableObjects for monsters, skills, and items, loaded through
+          Addressables. A polymorphic effect system (<code>[SerializeReference]</code> + Strategy Pattern) is shared by
+          skills and consumables; target types use <code>[Flags]</code> for single-target and AoE.</li>
+        <li><strong>Saving &amp; pooling:</strong> Three-slot JSON saves through an ISaveable registry; a generic object
+          pool (IPoolable) for combat UI.</li>
+        <li><strong>Art &amp; UI/UX:</strong> Sprites created in Aseprite; designed the turn-order queue and unit cards,
+          with distinct indicators for cooldown and insufficient MP.</li>
+      </ul>
+      <h3>Challenge: Pixel-Perfect Sprites</h3>
+      <p>The Aseprite Importer trims transparent pixels, which can shift pivots between frames. The fix was to change
+        the Mesh Type from Tight to Full Rect and use a consistent pivot.</p>
+      <h3>Workflow</h3>
+      <p>Worked with feature and develop branches, using pull requests.</p>
+      <div class="links"><a class="btn" href="https://github.com/nguyencong99dev/Mo-Li-Project">Source Code on
+          GitHub</a></div>
+    </div>
+  </dialog>
+
+  <!-- ===== POPUP: E-Commerce ===== -->
+  <dialog id="shop" aria-labelledby="t-shop"><button class="x" data-close aria-label="Close">✕</button>
+    <div class="dlg">
+      <h2 id="t-shop">E-Commerce Web System with Personalized Recommendations</h2>
+      <div class="tags"><span class="tag">Angular</span><span class="tag">Express.js</span><span
+          class="tag">MongoDB</span><span class="tag">TypeScript</span><span class="tag">08/2023 – 02/2024</span></div>
+      <div class="thumb" data-ph="[ web interface image ]"><img src="assets/img/ecommerce.png"
+          alt="E-commerce system interface" onerror="this.remove()"></div>
+      <h3>Overview</h3>
+      <p>A full-stack e-commerce system with authentication, shopping cart, order management, and product management.
+      </p>
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li><strong>Custom recommendation model:</strong> Neighborhood-Based Collaborative Filtering (recommendations
+          based on users with similar behavior), implemented entirely in TypeScript without an ML library.</li>
+        <li><strong>Custom dataset:</strong> Built from user behavior data (purchase history and ratings) to train and
+          evaluate the model.</li>
+        <li><strong>Backend integration:</strong> Integrated recommendations into the backend to return personalized
+          product lists for each user.</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="https://github.com/nguyencong99dev/DATN_BE">Backend</a>
+        <a class="btn ghost" href="https://github.com/nguyencong99dev/DATN_FE">Frontend</a>
+      </div>
+    </div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+
+</html>
