@@ -9,8 +9,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500&family=Pixelify+Sans:wght@500;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
+  <link rel="stylesheet" href="./styles.css">
+
 </head>
 
 <body>
@@ -23,6 +23,8 @@
         <li class="hide-sm"><a class="link" href="#skills">Skills</a></li>
         <li class="hide-sm"><a class="link" href="#education">Education</a></li>
         <li><a class="link" href="#contact">Contact</a></li>
+        <li class="hide-sm"><a class="link" href="./assets/cv/NGUYEN VAN THANH CONG CV Unity Developer.pdf"
+            download="NGUYEN_VAN_THANH_CONG_CV.pdf">Download CV</a></li>
         <li><button class="theme" id="theme" aria-label="Toggle light and dark themes">◐</button></li>
       </ul>
     </div>
@@ -34,7 +36,7 @@
         <p class="eyebrow">▶ PRESS START</p>
         <h1>Hello, I'm <span>Công</span>.<br>Software Developer transitioning into game development.</h1>
         <p>Over 2 years of experience on large-scale enterprise projects with a 47-person team. I’m now focused on game
-          systems programming with Unity and C#. I also create pixel art in Aseprite and design combat UI/UX.</p>
+          systems programming with Unity and C#.</p>
         <div class="cta">
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn ghost" href="#contact">Get in Touch</a>
@@ -47,7 +49,7 @@
         <h2>Projects</h2>
         <div class="grid">
           <article class="card" data-open="mo-li">
-            <div class="thumb" data-ph="[ Mo-Li gameplay image ]"><img src="assets/img/mo-li-combat.png"
+            <div class="thumb" data-ph="[ Mo-Li gameplay image ]"><img src="./assets/img/mo-li-combat.png"
                 alt="Mo-Li combat screen" onerror="this.remove()"></div>
             <h3>Mo-Li: Monster-Collection RPG</h3>
             <p>A turn-based monster-collection RPG built with Unity and C#, featuring event-driven architecture and
@@ -57,7 +59,7 @@
             <button class="more">View Details →</button>
           </article>
           <article class="card" data-open="shop">
-            <div class="thumb" data-ph="[ e-commerce interface image ]"><img src="assets/img/ecommerce.png"
+            <div class="thumb" data-ph="[ e-commerce interface image ]"><img src="./assets/img/ecommerce.png"
                 alt="E-commerce system interface" onerror="this.remove()"></div>
             <h3>E-Commerce with Personalized Recommendations</h3>
             <p>A full-stack e-commerce application with a custom TypeScript collaborative filtering model that
@@ -116,7 +118,7 @@
               class="tag">SQL</span></div>
           <div class="tags"><b>TOOLS</b><span class="tag">Git</span><span class="tag">Docker</span><span
               class="tag">Postman</span></div>
-          <div class="tags"><b>OTHER</b><span class="tag">SAP ABAP</span><span class="tag">English B1</span></div>
+          <div class="tags"><b>OTHER</b><span class="tag">SAP ABAP</span></div>
         </div>
       </div>
     </section>
@@ -125,7 +127,7 @@
         <h2>Education</h2>
         <article class="edu-card">
           <div class="thumb" data-ph="[ ảnh trường đại học ]">
-            <img src="assets/img/university.png" alt="Khuôn viên University of Transport and Communications 2"
+            <img src="./assets/img/university.png" alt="Khuôn viên University of Transport and Communications 2"
               onerror="this.remove()">
           </div>
           <div>
@@ -161,8 +163,8 @@
       <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Feb 2026 –
           Present</span></div>
       <div class="thumb" data-ph="[ video gameplay Mo-Li ]">
-        <video controls playsinline preload="metadata" poster="assets/img/mo-li-combat.png">
-          <source src="assets/video/gamedemo.mp4" type="video/mp4" onerror="this.parentElement.remove()">
+        <video controls playsinline preload="metadata" poster="./assets/img/mo-li-combat.png">
+          <source src="./assets/video/gamedemo.mp4" type="video/mp4" onerror="this.parentElement.remove()">
         </video>
       </div>
       <h3>Overview</h3>
@@ -170,26 +172,30 @@
         with minimal changes to the core code.</p>
       <h3>Technical Highlights</h3>
       <ul>
-        <li><strong>Core architecture:</strong> An asynchronous Bootstrapper boot sequence, persistent managers (Assets,
-          Audio, Input, Scene, and Save), and separate World and Combat scenes.</li>
-        <li><strong>Generic EventBus&lt;T&gt;</strong> (struct events with last-value replay) decouples the UI from
-          gameplay (<em>event-driven architecture</em>).</li>
-        <li><strong>Combat:</strong> State Pattern with substates for player actions (choose action → choose target →
-          confirm). Skills, items, and fleeing are modeled with the Command Pattern and processed through an
-          asynchronous ActionQueue. The queue supports priority insertion for reactions such as Faint and guards against
-          reentrancy.</li>
-        <li><strong>Data-driven design:</strong> ScriptableObjects for monsters, skills, and items, loaded through
-          Addressables. A polymorphic effect system (<code>[SerializeReference]</code> + Strategy Pattern) is shared by
-          skills and consumables; target types use <code>[Flags]</code> for single-target and AoE.</li>
-        <li><strong>Saving &amp; pooling:</strong> Three-slot JSON saves through an ISaveable registry; a generic object
-          pool (IPoolable) for combat UI.</li>
-        <li><strong>Art &amp; UI/UX:</strong> Sprites created in Aseprite; designed the turn-order queue and unit cards,
-          with distinct indicators for cooldown and insufficient MP.</li>
+        <li><strong>Decoupled Game Architecture:</strong> Architected core game sequence with an asynchronous
+          Bootstrapper, persistent
+          singleton managers (Audio, Input, Scene, Save, Assets), and strict World vs. Combat scene boundaries.</li>
+        <li><strong>Event-Driven Communication:</strong> Engineered a generic EventBus<T> utilizing struct events and
+            last-value replay
+            caching, completely isolating gameplay simulation from UI updates and audio playback.</li>
+
+        <li><strong>Combat Engine &amp; Action Queue: </strong> Implemented turn-based combat with State Pattern
+          sub-states for player
+          decision flow (Action → Target → Confirm). Modeled skills and item usage as Command objects executed via an
+          asynchronous ActionQueue with priority insertion for interrupt reactions (e.g., Faint) and reentrancy guards.
+        </li>
+        <li><strong>Designer Content Pipeline:</strong> Designed a data-driven system with ScriptableObjects loaded via
+          Addressables; built a
+          polymorphic effect pipeline (<code>[SerializeReference]</code> + Strategy Pattern) and bitwise flag target
+          types <code>[Flags]</code> empowering designers to configure modular abilities without code modifications.
+        </li>
+        <li><strong>Persistence &amp; Memory Optimization:</strong> Developed a 3-slot JSON save architecture with an
+          ISaveable registry
+          and a generic object pool (IPoolable) for dynamic combat UI elements and floating damage indicators.</li>
+        <li><strong>Asset Prep &amp; UI/UX:</strong> Customized 2D sprite assets using Aseprite; implemented complete
+          combat UI/UX with
+          dynamic turn order, unit status cards, and visual feedback for cooldowns and MP states.</li>
       </ul>
-      <h3>Challenge: Pixel-Perfect Sprites</h3>
-      <p>The Aseprite Importer trims transparent pixels, which can shift pivots between frames. The fix was to change
-        the Mesh Type from Tight to Full Rect and use a consistent pivot.</p>
-      <h3>Workflow</h3>
       <p>Worked with feature and develop branches, using pull requests.</p>
       <div class="links"><a class="btn" href="https://github.com/nguyencong99dev/Mo-Li-Project">Source Code on
           GitHub</a></div>
@@ -202,7 +208,7 @@
       <h2 id="t-shop">E-Commerce Web System with Personalized Recommendations</h2>
       <div class="tags"><span class="tag">Angular</span><span class="tag">Express.js</span><span
           class="tag">MongoDB</span><span class="tag">TypeScript</span><span class="tag">08/2023 – 02/2024</span></div>
-      <div class="thumb" data-ph="[ web interface image ]"><img src="assets/img/ecommerce.png"
+      <div class="thumb" data-ph="[ web interface image ]"><img src="./assets/img/ecommerce.png"
           alt="E-commerce system interface" onerror="this.remove()"></div>
       <h3>Overview</h3>
       <p>A full-stack e-commerce system with authentication, shopping cart, order management, and product management.
@@ -222,7 +228,7 @@
       </div>
     </div>
   </dialog>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
